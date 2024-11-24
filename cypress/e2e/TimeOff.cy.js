@@ -50,8 +50,8 @@ describe('Profile TestCases', () => {
             new LoginPage()
                 .load_Login(user.email, user.password)
                 .NavigateToTimeOf()
-                .E2ETimeOff(user.userid,user.timeOffType,user.timeTypeMessage,daydate2,daydate7,user.file,user.timeOffMSG,desc)
-                
+                .E2ETimeOff(user.userid, user.timeOffType, user.timeTypeMessage, daydate2, daydate7, user.file, user.timeOffMSG, desc)
+
         })
     })
 })
