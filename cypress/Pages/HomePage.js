@@ -1,4 +1,5 @@
 import ProfilePage from "./ProfilePage"
+import TimeOffPage from "./Time_OffPage"
 
 class HomePage {
     get userIdFromURL() {
@@ -8,6 +9,11 @@ class HomePage {
         return cy.get('.mainnav')
             .children().contains("Your Profile")
     }
+    get timeOffBTN() {
+        return cy.get('.mainnav')
+            .children().contains("Time Off")
+    }
+
 
     userIDFromPageURL(userID) {
         this.userIdFromURL.should('contain', userID)
@@ -16,6 +22,10 @@ class HomePage {
     NavigateToProfilePage() {
         this.profilePageIcon.click()
         return new ProfilePage()
+    }
+    NavigateToTimeOf() {
+        this.timeOffBTN.click()
+        return new TimeOffPage()
     }
 }
 export default HomePage

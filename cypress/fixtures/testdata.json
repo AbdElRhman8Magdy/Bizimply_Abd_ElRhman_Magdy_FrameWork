@@ -10,5 +10,9 @@
   "passport": "13/10/2023",
   "country": "Egypt",
   "passportColor": "rgb(238, 235, 235)",
+  "timeOffType":"Other",
+  "timeTypeMessage":"not deducted from your holiday ",
+  "file":"pp.jpg",
+  "timeOffMSG":"Are you sure you want to submit this request?",
   "token": "mkGv42RXX5ZyFbAxHulPeE0VIkXYG0tpHTylI12%2BHD9OP4zFIB1saE9%2FsLF13gumxW3LVX89RsQYiISG14fXwMPCXPijEakxo5VBYeq4AiLR09%2FejV9eT0reixW9CmlvxIfmY1Ep1qxGrIR6s2EUqd%2BFiRdD38FMGNTieVDqOqmy2p%2B3Nkx70ABuHhNurPx2rRtmdEbxRAvO72BCyo752lEwwWopznhHYlrzr%2FnYmexm8r%2FqyiTcW2XtULINXMqJlK1cY6spmX%2F9fZhXNeDTthzDOEuQNhush1SrXW2NRWoU4BPEEaH%2BgKulBlq%2FIC9epgy0H7wccRSAWTj8liTv%2BhkA31EYMGwhdRSzC59ucDAdM2Wy0r%2Frf2eBryfrE3ud1gT0QwtUo39uK5ZWtkLiSCFBwNwnkpSCyQQu2XmiFTbxjsRNnF7ITA1sB1GolKnVlCumBgQQm4MpvHDK4KavKDmsmbB127B4US89UEOb2YqgoYkhAn6gP053cfGkhUOXMDv6mqGtto1l5vykpYb1rhZWmkKWcSgfi5Z%2FgJiiZg9b4C8oYELmt4CK4JAJK0rL7ykH0D1znu3VYTbrQ00k2aVi9q6w--URzD4pXnrytrWcEd--a6gq%2BgoGRlht4MZtUNXo7w%3D%3D"
 }
