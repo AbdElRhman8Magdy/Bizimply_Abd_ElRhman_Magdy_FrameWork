@@ -2,42 +2,42 @@ import { th } from "@faker-js/faker"
 import HomePage from "./HomePage"
 
 
-class LoginPage{
+class LoginPage {
     // locators / elements
 
-    get emailInput(){
+    get emailInput() {
         return cy.get('#user_user_name')
     }
 
-    get passwordInput(){
+    get passwordInput() {
         return cy.get('#user_password')
     }
-    get rememberMe(){
+    get rememberMe() {
         return cy.get('#user_remember_me')
     }
-    get submitBtn(){
+    get submitBtn() {
         return cy.get('#sign-in-button')
     }
 
-   
-   
+
+
 
     //Method
 
-    load(){
+    load() {
         cy.visit('/')
         return this
     }
 
-    login(email,password){
+    login(email, password) {
 
         this.emailInput.type(email)
         this.passwordInput.type(password)
         this.rememberMe.click()
         this.submitBtn.click()
-         return new HomePage()
+        return new HomePage()
     }
-    load_Login(email,password){
+    load_Login(email, password) {
         cy.visit('/')
         this.emailInput.type(email)
         this.passwordInput.type(password)
