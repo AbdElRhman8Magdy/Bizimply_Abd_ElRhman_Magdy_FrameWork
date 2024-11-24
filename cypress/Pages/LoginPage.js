@@ -37,6 +37,14 @@ class LoginPage{
         this.submitBtn.click()
          return new HomePage()
     }
+    load_Login(email,password){
+        cy.visit('/')
+        this.emailInput.type(email)
+        this.passwordInput.type(password)
+        this.rememberMe.click()
+        this.submitBtn.click()
+        return new HomePage()
+    }
 }
 
 export default LoginPage
