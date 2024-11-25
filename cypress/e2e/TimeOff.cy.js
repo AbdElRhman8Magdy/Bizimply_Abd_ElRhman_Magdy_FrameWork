@@ -44,13 +44,13 @@ describe('Profile TestCases', () => {
                 .ConfirmAddedDesc(desc)
         })
     })
-    it("E2E REquest Timee-Off Page", () => {
+    it.only("E2E REquest Timee-Off Page", () => {
 
         cy.get('@user').then((user) => {
             new LoginPage()
                 .load_Login(user.email, user.password)
-                .NavigateToTimeOf()
-                .E2ETimeOff(user.userid, user.timeOffType, user.timeTypeMessage, daydate2, daydate7, user.file, user.timeOffMSG, desc)
+                .NavigateToUnavailability()
+                .E2Eunavailability(user.userid, user.timeOffType, user.timeTypeMessage, daydate2, daydate7, user.file, user.timeOffMSG, desc)
 
         })
     })

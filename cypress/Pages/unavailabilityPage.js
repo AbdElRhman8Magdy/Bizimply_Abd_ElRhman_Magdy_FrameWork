@@ -123,5 +123,36 @@ class UnavailabilityPage {
         this.addedDesc.contains(desc)
         return this
     }
+    E2Eunavailability(time,time1,Kind,todayDate,day,time3,time2,describe,conMSg,desc) {
+        this.UnavaBTN.contains('Add Unavailability').click()
+        this.PrtDayBox.check({ force: true })
+        this.startFrom.clear()
+        this.startFrom.type(time)
+        this.endAt.clear()
+        this.endAt.type(time1)
+        this.BackFromReq.should('be.visible')
+        this.KindSel.select(Kind)
+        this.dayFriBox.check()
+        this.dayMonBox.check()
+        this.dayWedBox.check()
+        this.daySatBox.check()
+        this.strsOnDate.clear()
+        this.strsOnDate.type(todayDate)
+        this.endsOnDateBox.check({ force: true })
+        this.endOnDate.clear()
+        this.endOnDate.type(day)
+        this.PrtDayBox.check({ force: true })
+        this.startFrom.clear({ force: true })
+        this.startFrom.type(time3)
+        this.endAt.clear({ force: true })
+        this.endAt.type(time2)
+        this.note.type(describe)
+        this.subBTN.click()
+        this.SubmitMsg.contains(conMSg)
+        this.conBTN.click()
+        this.alertMSG.should('be.visible')
+        this.addedDesc.contains(desc)
+        return this
+    }
 }
 export default UnavailabilityPage

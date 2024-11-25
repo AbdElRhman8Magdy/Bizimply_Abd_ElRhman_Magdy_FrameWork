@@ -22,7 +22,7 @@ describe('Profile TestCases', () => {
                 .AddStartTime(sTime)
         })
     })
-    it.only("REquest New unavailability ", () => {
+    it("REquest New unavailability ", () => {
 
         cy.get('@user').then((user) => {
             new LoginPage()
@@ -50,6 +50,8 @@ describe('Profile TestCases', () => {
         cy.get('@user').then((user) => {
             new LoginPage()
                 .load_Login(user.email, user.password)
+                .NavigateToUnavailability()
+                .E2Eunavailability(sTime,sTime,user.Kind,todaysDate,daydate3,user.SartTime,user.EndTime,desc,user.unavconf,desc)
 
         })
     })
