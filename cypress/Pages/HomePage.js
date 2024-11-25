@@ -1,5 +1,6 @@
 import ProfilePage from "./ProfilePage"
 import TimeOffPage from "./Time_OffPage"
+import UnavailabilityPage from "./unavailabilityPage"
 
 class HomePage {
     get userIdFromURL() {
@@ -12,6 +13,10 @@ class HomePage {
     get timeOffBTN() {
         return cy.get('.mainnav')
             .children().contains("Time Off")
+    }
+    get unavailabilityBTN() {
+        return cy.get('.mainnav')
+
     }
 
 
@@ -26,6 +31,10 @@ class HomePage {
     NavigateToTimeOf() {
         this.timeOffBTN.click()
         return new TimeOffPage()
+    }
+    NavigateToUnavailability () {
+        this.unavailabilityBTN.children().contains("Unavailability").click()
+        return new UnavailabilityPage()
     }
 }
 export default HomePage

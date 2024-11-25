@@ -18,6 +18,7 @@ class LoginPage {
     get submitBtn() {
         return cy.get('#sign-in-button')
     }
+    
 
 
 
