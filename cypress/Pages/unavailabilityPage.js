@@ -123,7 +123,7 @@ class UnavailabilityPage {
         this.addedDesc.contains(desc)
         return this
     }
-    E2Eunavailability(time,time1,Kind,todayDate,day,time3,time2,describe,conMSg,desc) {
+    E2Eunavailability(time, time1, Kind, todayDate, day, time3, time2, describe, conMSg, desc) {
         this.UnavaBTN.contains('Add Unavailability').click()
         this.PrtDayBox.check({ force: true })
         this.startFrom.clear()

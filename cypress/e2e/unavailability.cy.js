@@ -38,7 +38,7 @@ describe('Profile TestCases', () => {
                 .DayCheck()
                 .AddStartDate(todaysDate)
                 .AddEndtDate(daydate3)
-                .SetPartDay(user.SartTime,user.EndTime)
+                .SetPartDay(user.SartTime, user.EndTime)
                 .AddDesc(desc)
                 .ClieckSubmit(user.unavconf)
                 .CheckAddedReq(desc)
@@ -51,7 +51,7 @@ describe('Profile TestCases', () => {
             new LoginPage()
                 .load_Login(user.email, user.password)
                 .NavigateToUnavailability()
-                .E2Eunavailability(sTime,sTime,user.Kind,todaysDate,daydate3,user.SartTime,user.EndTime,desc,user.unavconf,desc)
+                .E2Eunavailability(sTime, sTime, user.Kind, todaysDate, daydate3, user.SartTime, user.EndTime, desc, user.unavconf, desc)
 
         })
     })
