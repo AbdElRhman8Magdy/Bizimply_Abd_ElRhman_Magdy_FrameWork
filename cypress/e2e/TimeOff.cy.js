@@ -44,7 +44,7 @@ describe('Profile TestCases', () => {
                 .ConfirmAddedDesc(desc)
         })
     })
-    it.only("E2E REquest Timee-Off Page", () => {
+    it("E2E REquest Timee-Off Page", () => {
 
         cy.get('@user').then((user) => {
             new LoginPage()
