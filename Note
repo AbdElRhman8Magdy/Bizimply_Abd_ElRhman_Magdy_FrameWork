@@ -1,0 +1,7 @@
+// npx cypress run --record --key <your-record-key> --parallel
+
+// Cypress.config('defaultCommandTimeout', 100000)
+//npx cypress run --record --key 4c6b3078-3093-4d24-8b2c-8daf8f3a5c4b
+//cypress run --config defaultCommandTimeout=10000
+
+// npx cypress run --record --key 4c6b3078-3093-4d24-8b2c-8daf8f3a5c4b

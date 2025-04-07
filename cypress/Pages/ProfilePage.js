@@ -97,13 +97,17 @@ class ProfilePage {
         this.phoneNo.type(Phone)
         this.birthDate.clear()
         this.birthDate.type(Birth)
+        cy.screenshot
         this.Ethinic.click({ force: true }).type('{selectall}{del}').type(Ethinic + '{downArrow}{enter}')
         this.passport.type('{selectall}{del}').type(Passport + '{enter}')
         this.country.click().type('{selectall}{del}').type(Country + '{downArrow}{enter}')
+        cy.screenshot
         this.PassportStatus.should('be.visible').should('have.css',
             'background-color',
             _passportColor)
+            cy.screenshot
         this.alert.should('contain.text', 'Your profile')
+        cy.screenshot
         return this
     }
 

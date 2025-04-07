@@ -10,4 +10,9 @@ it("should be able to Login Successfully", () => {
             .userIDFromPageURL(user.userid)
 
     })
-})
+}) 
+it("add-Action", () => {
+    cy.get('@user').then((user) => {
+        cy.login(user.email, user.password)
+        })  
+    })

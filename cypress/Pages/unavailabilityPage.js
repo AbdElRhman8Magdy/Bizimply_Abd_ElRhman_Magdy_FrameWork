@@ -57,7 +57,7 @@ class UnavailabilityPage {
         return cy.get('#ok-button-unavailability')
     }
     CreateUnavReq() {
-        this.UnavaBTN.contains('Add Unavailability').click()
+        this.UnavaBTN.contains('Add Unavailability').click() //.debug().pause()
         return this
     }
     CheckPartDay() {
@@ -91,17 +91,18 @@ class UnavailabilityPage {
     }
     AddStartDate(todayDate) {
         this.strsOnDate.clear()
-        this.strsOnDate.type(todayDate)
+        this.strsOnDate.type(todayDate).blur()
         return this
     }
     AddEndtDate(day) {
         this.endsOnDateBox.check({ force: true })
         this.endOnDate.clear()
-        this.endOnDate.type(day)
+        this.endOnDate.type(day).blur()
+        
         return this
     }
     SetPartDay(time, time2) {
-        this.PrtDayBox.check({ force: true })
+        // this.PrtDayBox.check({ force: true })   // as by ading blur on callender past step
         this.startFrom.clear({ force: true })
         this.startFrom.type(time)
         this.endAt.clear({ force: true })
@@ -119,7 +120,7 @@ class UnavailabilityPage {
         return this
     }
     CheckAddedReq(desc) {
-        this.alertMSG.should('be.visible')
+        this.alertMSG.should('be.visible') //.pause()
         this.addedDesc.contains(desc)
         return this
     }
@@ -131,6 +132,7 @@ class UnavailabilityPage {
         this.endAt.clear()
         this.endAt.type(time1)
         this.BackFromReq.should('be.visible')
+        cy.screenshot
         this.KindSel.select(Kind)
         this.dayFriBox.check()
         this.dayMonBox.check()
@@ -147,10 +149,12 @@ class UnavailabilityPage {
         this.endAt.clear({ force: true })
         this.endAt.type(time2)
         this.note.type(describe)
+        cy.screenshot
         this.subBTN.click()
         this.SubmitMsg.contains(conMSg)
         this.conBTN.click()
         this.alertMSG.should('be.visible')
+        cy.screenshot
         this.addedDesc.contains(desc)
         return this
     }

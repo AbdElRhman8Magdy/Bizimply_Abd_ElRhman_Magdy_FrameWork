@@ -44,6 +44,9 @@ class TimeOffPage {
     get confrimSubmitAlert() {
         return cy.get('.alert')
     }
+    get assPgaeTitle() {
+        return cy.url()
+    }
     get addedTimeDesc() {
         return cy
     }
@@ -112,24 +115,32 @@ class TimeOffPage {
         this.addedTimeDesc.contains(text)
         return this
     }
-    E2ETimeOff(userID, Type, TypeMessage, day, text, file, TimeOffMSG) {
+    AsserrtPageTitle(PTitle) {
+        this.assPgaeTitle.should('contain', PTitle)
+        return this
+    }
+
+    E2ETimeOff(userID, Type, TypeMessage, day, day2, text, file, TimeOffMSG, AlertMess) {
         this.user_ID.should('contain', userID)
         this.user_ID.should('contain', 'time_off_requests')
         this.addTimeOffBTN.click()
         this.backToTimeOffBTN.should('contain.text', 'Back to Time Off')
         this.timeOffType.select(Type)
         this.timeOffOther.should('contain.text', TypeMessage)
+        cy.screenshot
         this.holStrtOn.type(day)
-        this.holEndOn.type(day)
+        this.holEndOn.type(day2)
         this.holDesc.type(text)
         this.fileUpload.click()
-        this.selectFileUpload.selectFile(file, { force: true })
+        cy.screenshot
+        this.selectFileUpload.selectFile(file, { force: true }) // TRY WITHOUT 
         this.addedFileName.should('contain.text', file)
         this.submitBTN.click()
         this.submitMSG.should('contain.text', TimeOffMSG)
         this.confrimSubmitMSG.click()
-        this.confrimSubmitAlert.click()
+        this.confrimSubmitAlert.should('contains.text', AlertMess)
         this.addedTimeDesc.contains(text)
+        cy.screenshot
         return this
     }
 }
